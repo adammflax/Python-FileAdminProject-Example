@@ -13,7 +13,7 @@ class huddleApi:
 
         def getUser(self):
             headers = {'Accept': 'application/vnd.huddle.data+json', 'Authorization': 'OAuth2' + self.tokenStore.getAccessToken()}
-            uri = "http://api.huddle.dev/" + "entry/"
+            uri = "http://api.huddle.net/" + "entry/"
             req = urllib2.Request(uri, headers=headers)
             response = urllib2.urlopen(req)
             return response

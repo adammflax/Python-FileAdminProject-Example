@@ -3,11 +3,10 @@ import huddleApi
 import user
 import os
 
-huddleAuthServer = "http://login.huddle.dev/"
-huddleApiServer = "http://api.huddle.dev/"
-consumer_key = "FileAdminProjectHuddleOob"
-redirect_uri = "urn:ietf:wg:oauth:2.0:oob"
-
+huddleAuthServer = "http://FOO.COM"
+huddleApiServer = "http://BAR.COM"
+consumer_key = "foo"
+redirect_uri = "bar"
 
 def run_example():
     #first lets get the auth code from the client
