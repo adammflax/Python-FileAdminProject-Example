@@ -1,4 +1,6 @@
 import json
+
+
 class document:
     def __init__(self, jsonBlob):
         self.jsonBlob = jsonBlob
@@ -24,4 +26,3 @@ class document:
             if self.jsonParse['links'][x]['href'] == Href:
                 return self.jsonParse['links'][x]['rel']
         return None
-        

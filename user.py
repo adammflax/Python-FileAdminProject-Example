@@ -1,5 +1,6 @@
 import json
 
+
 #instead store each workspace as a seperate dict
 class user:
     def __init__(self, jsonBlob):
@@ -20,13 +21,12 @@ class user:
 
     def getWorkSpaceSettingsName(self, workspaceId, settingId):
         return self.jsonParse['membership']['workspaces'][workspaceId]['settings'][settingId]['name']
-        
-    def getWorkSpaceSettingsValue(self, workspaceId):
+
+    def getWorkSpaceSettingsValue(self, workspaceId, settingId):
         return self.jsonParse['membership']['workspaces'][workspaceId]['settings'][settingId]['value']
-        
+
     def getWorkSpaceLinkHref(self, workspaceId, linkId):
         return self.jsonParse['membership']['workspaces'][workspaceId]['links'][linkId]['href']
-        
+
     def getWorkSpaceLinkRel(self, workspaceId, linkId):
         return self.jsonParse['membership']['workspaces'][workspaceId]['links'][linkId]['rel']
-        

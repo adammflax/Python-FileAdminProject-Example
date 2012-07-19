@@ -1,5 +1,6 @@
 import json
 
+
 class folder:
     def __init__(self, jsonBlob):
         self.jsonBlob = jsonBlob
@@ -24,10 +25,10 @@ class folder:
         return len(self.jsonParse['folders'][folderId]['links'])
 
     def geFolderTitle(self, folderId):
-        return self.jsonParse['folders'][foldeId]['title']
+        return self.jsonParse['folders'][folderId]['title']
 
     def getFolderUpdated(self, folderId):
-        return self.jsonParse['folders'][foldeId]['updated']
+        return self.jsonParse['folders'][folderId]['updated']
 
     def getFolderCreated(self, folderId):
         return self.jsonParse['folders'][folderId]['created']
@@ -42,14 +43,13 @@ class folder:
         return self.jsonParse['folders'][folderId]['links'][linkId]['rel']
 
     def getFolderLinkWithRel(self, folderId, Rel):
-        for x in range(getFolderLinks(folderId)):
+        for x in range(self.getFolderLinks(folderId)):
             if self.jsonParse['folders'][folderId]['links'][x]['rel'] == Rel:
                 return self.jsonParse['folders'][folderId]['links'][x]['rel']
         return None
 
     def getFolderLinkWithHref(self, folderId, Href):
-        for x in range(getFolderLinks(folderId)):
+        for x in range(self.getFolderLinks(folderId)):
             if self.jsonParse['folders'][folderId]['links'][x]['href'] == Href:
                 return self.jsonParse['folders'][folderId]['links'][x]['href']
         return None
-        
