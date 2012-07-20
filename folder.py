@@ -33,7 +33,7 @@ class folder:
     def getFolderCreated(self, folderId):
         return self.jsonParse['folders'][folderId]['created']
 
-    def getFolderCreated(self, folderId):
+    def getFolderDescription(self, folderId):
         return self.jsonParse['folders'][folderId]['description']
 
     def getFolderLinksHref(self, folderId, linkId):
